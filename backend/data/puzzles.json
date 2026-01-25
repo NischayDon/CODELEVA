@@ -1,0 +1,20 @@
+{
+    "ram-1": {
+        "id": "ram-1",
+        "instruction": "Initialize a variable named 'player_name' with the value 'CodeMaster'.",
+        "template": "# Create your variable here\n",
+        "hints": [
+            "Use the = operator",
+            "Strings use quotes"
+        ]
+    },
+    "ram": {
+        "id": "ram",
+        "instruction": "Initialize a variable named 'player_name' with the value 'CodeMaster'.",
+        "template": "# Create your variable here\n",
+        "hints": [
+            "Use the = operator",
+            "Strings use quotes"
+        ]
+    }
+}
