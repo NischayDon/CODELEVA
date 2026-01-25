@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# CodeLeva Quest
 
-## Project info
+**CodeLeva Quest** is an immersive 3D educational game where players build a virtual PC while learning programming concepts in **Python** and **C++**. Each hardware component corresponds to a computer science topic (e.g., RAM = Variables, CPU = Functions).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
+- **3D PC Building Simulation**: Drag and drop components into a gaming cabinet.
+- **Dual Language Learning**: Switch between Python and C++ seamlessly.
+- **Adaptive AI Tutor**: "Leva" provides hints and difficulty adjustments using a local LLM.
+- **Authorized Gameplay**: Progression is validated by a backend orchestrator.
 
-## How can I edit this code?
+## Tech Stack
+- **Frontend**: React, Vite, TypeScript, Three.js (React Three Fiber), TailwindCSS, Shadcn UI.
+- **Backend**: FastAPI (Python), Uvicorn.
+- **AI Service**: Local LLM integration (Qwen2.5 / Qwen2-VL) via HuggingFace Transformers.
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
+- Node.js (v18+)
+- Python (v3.10+)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Setup
 
-Changes made via Lovable will be committed automatically to this repo.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/NischayDon/CODELEVA.git
+    cd CODELEVA
+    ```
 
-**Use your preferred IDE**
+2.  **Run the Development Environment**:
+    We have provided a helper script to launch all 3 microservices (Frontend, Backend, AI Service).
+    ```powershell
+    # Windows (PowerShell)
+    .\start_dev.ps1
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3.  **Manual Start**:
+    - **Frontend**: `npm run dev` (Port 8080)
+    - **Backend**: `python run_server.py` (Port 8001)
+    - **AI Service**: `uvicorn ai_service.main:app --port 8002` (Port 8002)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Architecture
+This project follows a "Frontend as Visual Shell" architecture. All game logic, progression, and rewards are authoritative on the Backend. The AI Service provides advisory input but cannot alter game state directly.
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Credits
+Built by the CodeLeva Team.
